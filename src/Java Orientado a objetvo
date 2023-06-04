@@ -1,3 +1,5 @@
+CLASSE
+
 public class Filme {
     String nome;
     int anoDeLancamento;
@@ -23,4 +25,45 @@ public class Filme {
 
 
 
+}
+
+MAIN
+
+public class Principal {
+    public static void main(String[] args) {
+        Filme filme1 = new Filme();
+        filme1.nome = "Mario";
+        filme1.anoDeLancamento = 2023;
+        filme1.duracaoEmMinutos = 120;
+        filme1.incluidoNoPlano = true;
+
+        filme1.exibeFichatecnica();
+        filme1.avalia(8);
+        filme1.avalia(9.5);
+        filme1.avalia(9);
+        filme1.avalia(7);
+        filme1.avalia(8.5);
+        System.out.println("Quantas pessoas avaliaram: " + filme1.totalDeAvaliacoes);
+        System.out.println("Soma total das notas: " + filme1.somaDasAvaliacoes);
+        System.out.println("Avaliação: " + filme1.pegaMedia());
+
+        Filme filme2 = new Filme();
+        filme2.nome = "Homem aranha no aranhaverso";
+        filme2.anoDeLancamento = 2019;
+        filme2.duracaoEmMinutos = 135;
+        filme2.incluidoNoPlano = false;
+
+        filme2.exibeFichatecnica();
+        filme2.avalia(10);
+        filme2.avalia(9.5);
+        filme2.avalia(9);
+        filme2.avalia(10);
+        filme2.avalia(9);
+        System.out.println("Quantas pessoas avaliaram: " + filme2.totalDeAvaliacoes);
+        System.out.println("Soma total das notas: " + filme2.somaDasAvaliacoes);
+        System.out.println("Avaliação: " + filme2.pegaMedia());
+
+
+
+    }
 }
